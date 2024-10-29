@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Box</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 0 0.1rem;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 0.1em;
+    }
+
+    .header {
+      flex-grow: 0.75;
+      /* border: 1px solid red; */
+      border-radius: 0.25em;
+      background-color: #FF1F63;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1em;
+    }
+
+    .header>.logo {
+      width: 48px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .logout-menu {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .main {
+      flex-grow: 10;
+      /* border: 1px solid red; */
+      display: flex;
+      gap: 0.1em;
+    }
+
+    .footer {
+      flex-grow: 0.5;
+      /* border: 1px solid red; */
+      border-radius: 0.25em;
+      background-color: #E63535;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #f2f2f2;
+    }
+
+    .sidebar {
+      flex-grow: 1;
+      /* border: 1px solid green; */
+      border-radius: 0.25em;
+      min-width: 200px;
+      background-color: #31c580;
+    }
+
+    .main-content {
+      flex-grow: 3.5;
+      /* border: 1px solid green; */
+      border-radius: 0.25em;
+      background-color: #3EE4EE;
+      display: flex;
+      flex-direction: column;
+      gap: 0.1em;
+      padding: 0.1rem 0.25rem;
+    }
+
+    .main-content-header {
+      flex-grow: 0.05;
+      /* border: 1px solid blue; */
+      background-image: radial-gradient(#f1f1f1, #d7d7d7, #9c9c9c);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-content-body {
+      flex-grow: 1;
+      min-height: 0;
+      /* border: 1px solid blue; */
+      display: flex;
+      flex-direction: column;
+      gap: 0.1em;
+    }
+
+    .form-1 {
+      flex-grow: 1;
+      /* border: 1px solid green; */
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-container {
+      flex-grow: 1;
+    }
+
+    .buttons {
+      flex-grow: 0.1;
+      /* border: 1px solid blue; */
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .buttons>button {
+      --btn-bg-color: grey;
+      padding: 0.35em 0.75em;
+      background-color: var(--btn-bg-color);
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+
+
+    .form-2 {
+      flex-grow: 1;
+      border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-container {
+      flex-grow: 1;
+      padding: 1rem;
+    }
+
+    fieldset {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    fieldset>.form-fields {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+    }
+
+    .form-fields>div {
+      flex-grow: 1;
+    }
+
+    input {
+      padding: 0.25em 0.5em;
+      width: 100%;
+      height: 1.7em;
+      border: 1px solid grey;
+      border-radius: 5px;
+      outline: none;
+      font-size: 1em;
+      filter: drop-shadow(0 0 0.5 #f2f2f2);
+      transition: border 0.1s ease;
+    }
+
+    input:focus {
+      border: 1.5px solid #af4c70;
+    }
+
+    legend>span {
+      border: 1px solid grey;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img src="https://seeklogo.com/images/D/dutch-bangla-bank-logo-9AF0455399-seeklogo.com.png" alt="DBBL logo" />
+      </div>
+      <div>
+        <h2 class="app-name">
+          Outsourcing Employee Management System
+        </h2>
+      </div>
+      <div class="logout-menu">
+        <img src="./logout.png" alt="logout icon" />
+      </div>
+    </div>
+    <div class="main">
+      <div class="sidebar"></div>
+      <div class="main-content">
+        <div class="main-content-header">
+          <h2>New User Creation Panel</h2>
+        </div>
+        <div class="main-content-body">
+          <div class="form-1">
+            <div class="form-container">
+              <fieldset>
+                <legend><span>Customer Information</span></legend>
+                <div class="form-fields">
+
+                  <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+                  </div>
+                  <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                  <div>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required />
+                  </div>
+                  <div>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required />
+                  </div>
+                  <div>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" value="" required />
+                  </div>
+                </div>
+                <div class="buttons">
+                  <button style="--btn-bg-color: #3D439D">Save</button>
+                  <button style="--btn-bg-color: 
+                #F09519">Cancel</button>
+                </div>
+
+              </fieldset>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>© Copyright by Angkur Mondal |
+        <spane id="copyright-year"></spane>
+      </p>
+    </div>
+  </div>
+  <script>
+    const copyrightYear = document.getElementById("copyright-year");
+
+    copyrightYear.innerText = new Date().getFullYear();
+
+  </script>
+</body>
+
+</html>

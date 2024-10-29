@@ -1,0 +1,40 @@
+#tree {
+  min-height: 100px;
+}
+
+ul {
+  padding-inline-start: 14px !important;
+}
+
+li {
+  list-style-type: none;
+  margin-top: 10px;
+  position: relative;
+}
+
+li::before {
+  content: "";
+  border: 1px dashed darkblue;
+  height: 25px;
+  position: absolute;
+  top: -10px;
+  left: -13px;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  border: 1px dashed darkblue;
+  width: 10px;
+  left: -12px;
+  top: 9px;
+}
+
+li:only-child:before,
+li:only-child:after {
+  border: none;
+}
+
+li:last-child::before {
+  height: 19px;
+}

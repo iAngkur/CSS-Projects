@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&family=Raleway:ital@0;1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+:root {
+  --theme-color: #3EDAA2;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  background-color: var(--theme-color);
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+header a {
+  color: #FFF;
+}
+
+.logo {
+  width: 10%;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  padding-top: 5px;
+  padding-left: 5px;
+}

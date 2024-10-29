@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: cadetblue;
+    }
+
+    .diamond {
+      width: 200px;
+      height: 200px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      transform: rotate(45deg);
+    }
+
+    .diamond>span {
+
+      --top-border-color: transparent;
+      --bottom-border-color: #26c893;
+      --left-border-color: transparent;
+      --right-border-color: #1fb67c;
+
+      width: 0;
+      height: 0;
+      border-top: 50px solid var(--top-border-color);
+      border-right: 50px solid var(--right-border-color);
+      border-bottom: 50px solid var(--bottom-border-color);
+      border-left: 50px solid var(--left-border-color);
+    }
+
+    .diamond>span:nth-child(2) {
+      border-top-color: #1fb67c;
+      border-right-color: #20bc7d;
+      border-bottom-color: #26c893;
+      border-left-color: #55ddb9;
+    }
+
+    .diamond>span:nth-child(3) {
+      border-top-color: #1fb67c;
+      border-right-color: #20bc7d;
+      border-bottom-color: #27c893;
+      border-left-color: #55ddb9;
+    }
+
+    .diamond>span:nth-child(4) {
+      border-top-color: #1fb67c;
+      border-right-color: #20bc7d;
+      border-bottom-color: #26c893;
+      border-left-color: #55ddb9;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="diamond">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</body>
+
+</html>

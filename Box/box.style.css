@@ -1,0 +1,50 @@
+.container {
+  width: 150px;
+  min-height: 75px;
+  background-color: rgb(255, 255, 255);
+  padding: 0.5rem;
+  border-radius: 5px;
+  position: relative;
+}
+
+p {
+  font-size: 0.5rem;
+  text-align: justify;
+  color: rgb(0, 0, 0);
+  padding-inline: 10px;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  z-index: -1;
+  /* outline: 1px solid red; */
+  border-radius: 5px;
+  background-image: conic-gradient(red, rgb(217, 29, 29), green, rgb(89, 242, 23), blue, rgb(59, 59, 246), rgb(217, 29, 29));
+  filter: blur(0.08rem);
+  opacity: 0.5;
+}
+
+.container>div {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+button {
+  font-size: 0.5rem;
+  padding: 0.13rem 0.5rem;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 98, 41);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: rgb(255, 204, 0);
+}

@@ -1,0 +1,115 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    background: url("https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.card-image::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    box-shadow: -10px 10px 0 white;
+}
+
+.card-image::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    bottom: 65px;
+    left: 0;
+    box-shadow: -10px 10px 0 white;
+}
+
+.card-content {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(86, 66, 66);
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+}
+
+.card-content>.price {
+    position: absolute;
+    top: -75px;
+    left: 0;
+    width: 50%;
+    height: 75px;
+    background-color: rgb(86, 66, 66);
+    border-top: 10px solid white;
+    border-right: 10px solid white;
+    border-top-right-radius: 20px;
+}
+
+.card-content>.price::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    box-shadow: -10px -10px 0 white;
+}
+
+.card-content>.price::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0px;
+    right: -20px;
+    box-shadow: -10px 10px 0 rgb(86, 66, 66);
+}
+
+.card-content>.price>a {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 15px 15px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}

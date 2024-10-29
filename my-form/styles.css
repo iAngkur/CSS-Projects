@@ -1,0 +1,81 @@
+:root {
+    --color-white: #f3f3f3;
+    --color-darkblue: #1b1b1b;
+    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+    --color-green: #37af65;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--color-white);
+    background-color: var(--color-darkblue);
+    background-image: linear-gradient(115deg,
+            rgba(58, 58, 158, 0.8),
+            rgba(136, 136, 206, 0.7)),
+        url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg)
+}
+
+main {
+    margin: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    font-size: 2.2em;
+    padding: 1rem;
+    text-align: center;
+}
+
+#description {
+    font-size: 1.4em;
+    font-style: italic;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+#form-container {
+    background-color: var(--color-darkblue-alpha);
+    margin: 1.5rem;
+    padding: 3rem;
+    border-radius: 4px;
+}
+
+#survey-form>label {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+#survey-form>label[for] {
+    padding: 8px 0 8px 0;
+}
+
+input, select {
+    height: 1.5rem;
+    padding: 0 0.5rem;
+    outline: none;
+    border: none;
+
+
+}
+
+input:focus,
+select:focus {
+    border: 2px solid;
+    border-image: linear-gradient(to right, blue, red, green) 5;
+}
