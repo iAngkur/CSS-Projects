@@ -28,6 +28,30 @@
       background-color: #34588e;
       border: 10px solid white;
       position: relative;
+      overflow: hidden;
+    }
+
+    .pepsi::before {
+      content: '';
+      position: absolute;
+      height: 400px;
+      width: 500px;
+      background-color: white;
+      border-radius: 25%;
+      top: -187px;
+      left: -253px;
+      transform: rotate(-9deg);
+    }
+
+    .pepsi::after {
+      content: '';
+      position: absolute;
+      height: 500px;
+      width: 550px;
+      border-radius: 50%;
+      background-color: red;
+      top: -304px;
+      left: -304px;
     }
   </style>
 
