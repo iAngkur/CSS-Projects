@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camera</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f8f8;
+    }
+
+    .camera {
+      width: 205px;
+      height: 155px;
+      background-color: #D6d6d6;
+      border-radius: 15px;
+      box-shadow: 0 10px 15px -13px black;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .button {
+      width: 30px;
+      height: 5px;
+      background-color: #009587;
+      border-radius: 60px;
+      position: absolute;
+      top: -5px;
+      left: 16px;
+    }
+
+    .flash {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #f5f5f5;
+      position: absolute;
+      box-shadow: 0 4px 0 0 #c0c0c0;
+      top: 15px;
+      right: 15px;
+    }
+
+    .lens {
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+      background-color: #f5f5f5;
+      box-shadow: 0 8px 0 0 #c0c0c0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner-lens {
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      background-color: #00695c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner-lens-2 {
+      border-radius: 50%;
+      position: relative;
+
+      /* Initially, borders are hidden by setting their widths to 0 */
+      border-top: 31px solid transparent;
+      border-right: 31px solid transparent;
+      border-bottom: 31px solid transparent;
+      border-left: 31px solid transparent;
+
+      /* Animation to start after 3 seconds */
+      animation: revealBorders 2s steps(4, end) infinite;
+    }
+
+    @keyframes revealBorders {
+      0% {
+        border-top: 31px solid transparent;
+        border-right: 31px solid transparent;
+        border-bottom: 31px solid transparent;
+        border-left: 31px solid transparent;
+      }
+
+      25% {
+        border-top: 31px solid #00897B;
+        border-right: 31px solid transparent;
+        border-bottom: 31px solid transparent;
+        border-left: 31px solid transparent;
+      }
+
+      50% {
+        border-top: 31px solid #00897B;
+        border-right: 31px solid #4DB6AC;
+        border-bottom: 31px solid transparent;
+        border-left: 31px solid transparent;
+      }
+
+      75% {
+        border-top: 31px solid #00897B;
+        border-right: 31px solid #4DB6AC;
+        border-bottom: 31px solid #80CBC4;
+        border-left: 31px solid transparent;
+      }
+
+      100% {
+        border-top: 31px solid #00897B;
+        border-right: 31px solid #4DB6AC;
+        border-bottom: 31px solid #80CBC4;
+        border-left: 31px solid #26A69A;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="camera">
+    <div class="lens">
+      <div class="inner-lens">
+        <div class="inner-lens-2">
+
+        </div>
+      </div>
+    </div>
+    <div class="flash"></div>
+    <div class="button"></div>
+  </div>
+</body>
+
+</html>
